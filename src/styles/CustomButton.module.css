@@ -1,0 +1,31 @@
+.primary {
+  background-color: #ad1fea;
+}
+
+.primary:hover {
+  background-color: #c75af6;
+}
+
+.secondary {
+  background-color: #4661e6;
+}
+
+.secondary:hover {
+  background-color: #7c91f9;
+}
+
+.dark {
+  background-color: #3a4374;
+}
+
+.dark:hover {
+  background-color: #656ea3;
+}
+
+.danger {
+  background-color: #d73737;
+}
+
+.danger:hover {
+  background-color: #e98888;
+}
