@@ -1,7 +1,8 @@
 .pageTitle {
-  background: #e84d70;
-  background: radial-gradient(circle, #e84d70 2%, #a337f6 81%, #28a7ed 100%);
   color: #fff;
+  background-image: url("../assets/suggestions/desktop/background-header.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 
   padding: 2rem;
   border-radius: 10px;

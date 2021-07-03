@@ -1,0 +1,23 @@
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdownOptions {
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  margin-top: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+}
+
+.dropdown p {
+  display: inline-block;
+  margin: 0.2rem 0;
+}
+
+.dropdownOptions p:hover {
+  color: #ad1fea;
+}

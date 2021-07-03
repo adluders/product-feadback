@@ -13,8 +13,8 @@ const Sidebar = () => {
       </div>
 
       <div className={styles.filters}>
-        {pillOptions.map(pillOption => (
-          <Pill text={pillOption} />
+        {pillOptions.map((pillOption, inx) => (
+          <Pill key={inx} text={pillOption} />
         ))}
       </div>
 

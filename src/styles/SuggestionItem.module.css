@@ -1,0 +1,28 @@
+.selectionItem {
+  display: grid;
+  grid-template-columns: 0.5fr 3fr 1fr;
+  gap: 3rem;
+  align-items: center;
+
+  background-color: #fff;
+
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.content h2 {
+  font-size: 1.2rem;
+}
+
+.content p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}

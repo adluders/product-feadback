@@ -1,0 +1,20 @@
+.header {
+  background-color: #373f68;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.suggestionCount {
+  margin-left: 2rem;
+}
+
+.sortOptions {
+  margin-left: 4rem;
+}
+
+.cta {
+  margin-left: auto;
+}
