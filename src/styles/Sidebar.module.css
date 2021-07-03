@@ -1,0 +1,67 @@
+.pageTitle {
+  background: #e84d70;
+  background: radial-gradient(circle, #e84d70 2%, #a337f6 81%, #28a7ed 100%);
+  color: #fff;
+
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.pageTitle h1 {
+  margin-top: 2rem;
+}
+
+.filters {
+  background-color: #fff;
+  margin: 3rem 0;
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.roadmap {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.roadmapTitle {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.roadmapTitle a {
+  color: #4661e6;
+}
+
+.roadmapItem {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.roadmapItemColor {
+  padding: 0.5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.roadmapItem:first-of-type .roadmapItemColor {
+  background-color: #f49f85;
+}
+
+.roadmapItem:nth-of-type(2) .roadmapItemColor {
+  background-color: #ad1fea;
+}
+
+.roadmapItem:last-of-type .roadmapItemColor {
+  background-color: #62bcfa;
+}
+
+.roadmapItemCount {
+  margin-left: auto;
+}
