@@ -10,12 +10,17 @@
   margin-top: 1rem;
   border-radius: 10px;
   padding: 1rem;
-  width: 100%;
+  width: 150%;
 }
 
 .dropdown p {
   display: inline-block;
   margin: 0.2rem 0;
+}
+
+.dropdownOptions p {
+  width: 100%;
+  border-bottom: 1px solid rgba(58, 67, 116, 0.15);
 }
 
 .dropdownOptions p:hover {

@@ -29,7 +29,11 @@ button img {
   margin-right: 1rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
-  max-width: 85%;
+  max-width: 78%;
   margin: 1rem auto 0;
 }

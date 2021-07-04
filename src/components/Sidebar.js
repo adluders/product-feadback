@@ -1,9 +1,12 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { SuggestionContext } from "../context/SuggestionsContext";
 import styles from "../styles/Sidebar.module.css";
 import Pill from "./UI/Pill";
 
 const Sidebar = () => {
   const pillOptions = ["all", "UI", "UX", "enhancement", "bug", "feature"];
+  const { filterSuggestions } = useContext(SuggestionContext);
 
   return (
     <aside className={styles.sidebar}>
@@ -14,7 +17,11 @@ const Sidebar = () => {
 
       <div className={styles.filters}>
         {pillOptions.map((pillOption, inx) => (
-          <Pill key={inx} text={pillOption} />
+          <Pill
+            pillFunc={() => filterSuggestions(pillOption)}
+            key={inx}
+            text={pillOption}
+          />
         ))}
       </div>
 

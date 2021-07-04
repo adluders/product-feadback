@@ -10,11 +10,6 @@ const Home = () => {
       <div className={styles.content}>
         <Header />
         <SuggestionItem />
-        <SuggestionItem />
-        <SuggestionItem />
-        <SuggestionItem />
-        <SuggestionItem />
-        <SuggestionItem />
       </div>
     </main>
   );
