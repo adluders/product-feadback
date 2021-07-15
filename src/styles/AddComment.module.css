@@ -1,0 +1,22 @@
+.addcomment {
+  margin: 1.5rem auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem 2.5rem;
+}
+
+textarea {
+  width: 100%;
+  background-color: #f7f8fd;
+  border: none;
+  padding: 1rem 1.5rem;
+  resize: none;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

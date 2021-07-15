@@ -1,0 +1,48 @@
+.comment {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  color: #647196;
+  margin: 2rem auto;
+  padding: 2rem 0;
+}
+
+.comment:first-of-type {
+  border-bottom: 1px solid #8c92b3;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.header h2 {
+  color: #3a4374;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+.cta button {
+  color: #4661e6;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.body {
+  max-width: 90.5%;
+  margin-left: auto;
+}
+
+.userInfo {
+  flex-grow: 2;
+}
+
+.subcomment {
+  margin-left: 4rem;
+}
+
+.subcomment .body {
+  max-width: 90%;
+}
