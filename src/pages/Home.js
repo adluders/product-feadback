@@ -1,16 +1,17 @@
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
 import styles from "../styles/HomeStyles.module.css";
-import SuggestionItem from "../components/templates/SuggestionItem";
+import Suggestions from "../components/Suggestions";
 
 const Home = () => {
   return (
     <main className={styles.container}>
+      <div className={styles.topbar}></div>
       <Sidebar />
-      <div className={styles.content}>
+      <section className={styles.content}>
         <Header />
-        <SuggestionItem />
-      </div>
+        <Suggestions />
+      </section>
     </main>
   );
 };

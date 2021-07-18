@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 import styles from "../../styles/Comment.module.css";
 import CustomButton from "../UI/CustomButton";
 
-const CommentItem = ({ subComment }) => {
+const CommentItem = ({ subComment, commentInfo }) => {
+  const { content, user } = commentInfo;
+
   return (
     <div className={`${styles.comment} ${subComment && styles.subcomment}`}>
       <div className={styles.header}>
@@ -11,8 +13,8 @@ const CommentItem = ({ subComment }) => {
           <p>pic here</p>
         </div>
         <div className={styles.userInfo}>
-          <h2>Elijah Moss</h2>
-          <p>@hexagon.bestagon</p>
+          <h2> {user.name} </h2>
+          <p> {user.username} </p>
         </div>
 
         <div className={styles.cta}>
@@ -20,11 +22,7 @@ const CommentItem = ({ subComment }) => {
         </div>
       </div>
       <div className={styles.body}>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis iusto
-          perspiciatis rem corrupti, obcaecati possimus fugit necessitatibus
-          voluptatum vitae ratione?
-        </p>
+        <p> {content} </p>
       </div>
     </div>
   );

@@ -5,11 +5,11 @@ import Detail from "./pages/Detail";
 
 const App = () => {
   return (
-    <div className="container">
+    <div className="">
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/roadmap" exact component={Roadmap} />
-        <Route path="/detail/:info" component={Detail} />
+        <Route path="/suggestion/:info" component={Detail} />
       </Switch>
     </div>
   );

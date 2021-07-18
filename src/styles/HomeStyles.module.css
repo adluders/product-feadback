@@ -2,4 +2,16 @@
   display: grid;
   grid-template-columns: 1fr 2.3fr;
   gap: 2rem;
+
+  max-width: 78%;
+  margin: auto;
+}
+
+.topbar {
+  background-color: #f7f8fd;
+
+  position: fixed;
+  width: 78%;
+  height: 3rem;
+  z-index: 1;
 }

@@ -1,44 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 import Pill from "../UI/Pill";
 import styles from "../../styles/SuggestionItem.module.css";
 
 import chatbubble from "../../assets/shared/icon-comments.svg";
 
-const SuggestionItem = () => {
-  const item = {
-    id: 0,
-    title: "Add tags for solutions",
-    category: "enhancement",
-    upvotes: 112,
-    status: "suggestion",
-    description: "Easier to search for solutions based on a specific stack",
-    comments: [
-      {
-        id: 1,
-        content: "Awesome idea!",
-        user: {
-          image: "./assets/user-images/image-suzanne.jpg",
-          name: "Suzanne",
-          username: "upbeat1811",
-        },
-      },
-      {
-        id: 2,
-        content: "Use for fun!",
-        user: {
-          image: "./assets/user-images/image-thomas.jpg",
-          name: "Thomas",
-          username: "brawnybrave",
-        },
-      },
-    ],
-  };
+const SuggestionItem = ({ suggestion }) => {
+  const { title, category, upvotes, description, comments } = suggestion;
 
-  const { title, category, upvotes, description, comments } = item;
+  const [voteTotal, setVoteTotal] = useState(0);
 
-  const [voteTotal, setVoteTotal] = useState(upvotes);
+  useEffect(() => {
+    setVoteTotal(upvotes);
+  }, [upvotes]);
 
   const addToVote = () => setVoteTotal(voteTotal + 1);
 
@@ -47,7 +23,9 @@ const SuggestionItem = () => {
       <Pill pillFunc={addToVote} text={voteTotal} hasArrow />
       <Link
         className={styles.linkItem}
-        to={`/detail/${title.toLowerCase().split(" ").join("_")}`}
+        to={`/suggestion/${
+          title && title.toLowerCase().split("/").join("_").split(" ").join("_")
+        }`}
       >
         <div className={styles.content}>
           <h2>{title}</h2>
@@ -55,12 +33,20 @@ const SuggestionItem = () => {
         </div>
         <div className={styles.comment}>
           <img src={chatbubble} alt="chat bubble" />
-          <p> {comments.length} </p>
+          <p> {comments && comments.length} </p>
         </div>
         <Pill text={category} />
       </Link>
     </section>
   );
+};
+
+SuggestionItem.proptype = {
+  suggestion: PropTypes.object.isRequired,
+};
+
+SuggestionItem.defaultProps = {
+  suggestion: {},
 };
 
 export default SuggestionItem;
